@@ -1,0 +1,60 @@
+.Product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+}
+
+.ProductBody {
+  padding-top: 16px;
+}
+
+.ProductBody h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .ProductBody h3 {
+    font-size: 16px;
+  }
+}
+
+.ProductsImage {
+  position: relative;
+}
+
+.ProductsImageBlock {
+  display: block;
+}
+
+.AddToWishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.AddToWishlist:hover {
+  background-color: #000;
+}
+
+.AddToWishlist svg {
+  width: 24px;
+  height: 24px;
+}
+
+.AddToWishlist:hover svg {
+  color: #fff;
+}

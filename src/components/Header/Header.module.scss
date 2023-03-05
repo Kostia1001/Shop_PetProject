@@ -1,0 +1,50 @@
+.Header {
+  padding: 20px 0;
+}
+.Container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1650px;
+}
+.HeaderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.NavbarIcon {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+}
+svg {
+  width: 25px;
+  height: 25px;
+}
+
+.Number {
+  position: absolute;
+  top: -10px;
+  right: 2px;
+  font-size: 12px;
+  background-color: #da3f3f;
+  height: 22px;
+  width: 22px;
+  color: #fff;
+  line-height: 22px;
+  border-radius: 50%;
+  text-align: center;
+}
