@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../Button/Button";
-import Product from "../Product/Product";
+import Button from "../../Button/Button";
+import Product from "./Product/Product";
 import styles from "./ProductList.module.scss";
 
 import {
@@ -12,7 +12,7 @@ import {
   ProductImg6,
   ProductImg7,
   ProductImg8,
-} from "../Images/Images";
+} from "../../Images/Images";
 
 const Products = () => {
   const productsList = [

@@ -1,0 +1,25 @@
+.Container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1650px;
+  }
+  
+.WishlistTitle {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  @media (max-width: 1200px) {
+    .WishlistTitle {
+      margin-bottom: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .WishlistTitle {
+      margin-bottom: 20px;
+    }
+  }

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Banner.module.scss";
-import Button from "../Button/Button";
-import { HomeImg07 } from "../Images/Images";
+import Button from "../../Button/Button";
+import { HomeImg07 } from "../../Images/Images";
 const Banner = () => {
 
   return (

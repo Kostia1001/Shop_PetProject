@@ -1,0 +1,59 @@
+.Item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eeeeee;
+  padding: 20px;
+}
+
+.Item + .Item {
+  margin-top: 20px;
+}
+
+.ItemContent {
+  display: flex;
+  align-items: center;
+}
+
+.ItemBody {
+  display: flex;
+  align-items: flex-start;
+  color: #000;
+}
+
+.ItemImage {
+  display: block;
+  margin: 0 20px;
+  max-width: 75px;
+}
+
+.ItemTitle {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.ItemPrice {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.ItemButtons {
+  text-align: right;
+}
+
+.ItemDelete {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.ItemDelete svg {
+  width: 25px;
+  height: 25px;
+}
+
+.ItemBtn {
+  padding: 10px 20px;
+  font-size: 14px;
+}

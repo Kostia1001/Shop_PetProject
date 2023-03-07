@@ -1,7 +1,7 @@
 import React from "react";
-import CategoryItem from "../CategoryItem/CategoryItem";
+import CategoryItem from "./CategoryItem/CategoryItem";
 import styles from "./CategoryList.module.scss";
-import { BannerImg20, BannerImg21, BannerImg22 } from "../Images/Images";
+import { BannerImg20, BannerImg21, BannerImg22 } from "../../Images/Images";
 
 const Category = () => {
   const categoryList = [
