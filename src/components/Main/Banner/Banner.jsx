@@ -3,7 +3,6 @@ import styles from "./Banner.module.scss";
 import Button from "../../Button/Button";
 import { HomeImg07 } from "../../Images/Images";
 const Banner = () => {
-
   return (
     <section className={styles.Banner}>
       <div className={styles.Container}>
@@ -20,5 +19,4 @@ const Banner = () => {
     </section>
   );
 };
-// src="../img/image-home-07.jpg"
 export default Banner;

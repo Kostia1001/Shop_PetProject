@@ -1,17 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from './Product.module.scss'
+import styles from "./Product.module.scss";
+import { useContext } from "react";
+import { ShopContext } from "../../../../context/ProductsContext";
 
-const Product = (props) => {
-  const {src, ProductName, alt} = props;
+const Product = (product) => {
+  const { src, ProductName, alt, price, id } = product;
+
+  const { addToItem } = useContext(ShopContext);
+
+  const handleClick = () => {
+    addToItem(product);
+  };
   return (
-    <div className={styles.Product}>
+    <div className={styles.Product} id={id}>
       <div className={styles.ProductsImage}>
         <Link to="/" className={styles.ProductsImageBlock}>
           <img src={src} alt={alt} />
         </Link>
 
-        <Link to="/" className={styles.AddToWishlist}>
+        <button onClick={handleClick} className={styles.AddToWishlist}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -26,13 +34,13 @@ const Product = (props) => {
               d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
             />
           </svg>
-        </Link>
+        </button>
       </div>
       <div className={styles.ProductBody}>
         <h3>
           <Link to="/">{ProductName}</Link>
         </h3>
-        <p>$79.00</p>
+        <p>{price}</p>
       </div>
     </div>
   );

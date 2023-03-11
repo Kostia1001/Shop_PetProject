@@ -1,13 +1,21 @@
 import React from "react";
 import styles from "./Item.module.scss";
 import Button from "../../Button/Button";
+import { useContext } from "react";
+import { ShopContext } from "../../../context/ProductsContext";
 
 const Item = (props) => {
-  const { src, price, title, name, alt } = props;
+  const { src, price, ProductName, name='Add to card', alt, id} = props.item;
+
+  const { removeFromItem } = useContext(ShopContext);
+
+  const handelClick = () => {
+    removeFromItem(id)
+  }
   return (
-    <div className={styles.Item}>
+    <div className={styles.Item} >
       <div className={styles.ItemContent}>
-        <button className={styles.ItemDelete}>
+        <button className={styles.ItemDelete} onClick={handelClick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -28,7 +36,7 @@ const Item = (props) => {
           <img src={src} alt={alt} className={styles.ItemImage} />
 
           <div className="media-body mw-210">
-            <p className={styles.ItemTitle}>{title}</p>
+            <p className={styles.ItemTitle}>{ProductName}</p>
             <p className={styles.ItemPrice}>{price}</p>
           </div>
         </div>
