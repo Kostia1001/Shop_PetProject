@@ -1,19 +1,19 @@
 import React from "react";
 import styles from "./Item.module.scss";
 import Button from "../../Button/Button";
-import { useContext } from "react";
-import { ShopContext } from "../../../context/ProductsContext";
+import { removeFromItem } from "../../../store/productSlice";
+import { useDispatch } from "react-redux";
 
 const Item = (props) => {
-  const { src, price, ProductName, name='Add to card', alt, id} = props.item;
-
-  const { removeFromItem } = useContext(ShopContext);
+  const { src, price, ProductName, name = "Add to card", alt, id } = props.item;
+  const dispatch = useDispatch();
 
   const handelClick = () => {
-    removeFromItem(id)
-  }
+    dispatch(removeFromItem(id));
+  };
+
   return (
-    <div className={styles.Item} >
+    <div className={styles.Item}>
       <div className={styles.ItemContent}>
         <button className={styles.ItemDelete} onClick={handelClick}>
           <svg

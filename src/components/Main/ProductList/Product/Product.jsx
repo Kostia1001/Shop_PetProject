@@ -1,17 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Product.module.scss";
-import { useContext } from "react";
-import { ShopContext } from "../../../../context/ProductsContext";
+import { addToItem } from "../../../../store/productSlice";
+import { useDispatch } from "react-redux";
+
 
 const Product = (product) => {
   const { src, ProductName, alt, price, id } = product;
 
-  const { addToItem } = useContext(ShopContext);
+  const dispatch = useDispatch();
 
   const handleClick = () => {
-    addToItem(product);
+    dispatch(addToItem(product));
   };
+  
   return (
     <div className={styles.Product} id={id}>
       <div className={styles.ProductsImage}>
