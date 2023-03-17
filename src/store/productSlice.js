@@ -10,14 +10,12 @@ const productSlice = createSlice({
   reducers: {
     addToItem: (state, action) => {
       console.log(action);
-      return { products: [...state.products, action.payload] };
+      state.products.push(action.payload);
     },
     removeFromItem: (state, action) => {
-      return {
-        products: [
-          ...state.products.filter((product) => product.id !== action.payload),
-        ],
-      };
+      state.products = state.products.filter(
+        (product) => product.id !== action.payload
+      );
     },
   },
 });
