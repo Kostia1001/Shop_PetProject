@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../Button/Button";
 import Product from "./Product/Product";
 import styles from "./ProductList.module.scss";
+import { v4 as uuidv4 } from "uuid";
 
 import {
   ProductImg1,
@@ -20,49 +21,57 @@ const Products = () => {
       name: "Hoodie with pocket",
       src: ProductImg1,
       alt: "Product 01",
-      price: "50$",
+      price: "50",
+      id: uuidv4(),
     },
     {
       name: "Flowers cotton dress",
       src: ProductImg2,
       alt: "Product 01",
-      price: "45$",
+      price: "45",
+      id: uuidv4(),
     },
     {
       name: "Hoodie with pocket",
       src: ProductImg3,
       alt: "Product 01",
-      price: "60$",
+      price: "60",
+      id: uuidv4(),
     },
     {
       name: "Oversize cotton sweatshirt",
       src: ProductImg4,
       alt: "Product 01",
-      price: "12$",
+      price: "12",
+      id: uuidv4(),
     },
     {
       name: "Striped cotton-blend sweatshirt",
       src: ProductImg5,
       alt: "Product 01",
-      price: "12$",
+      price: "12",
+      id: uuidv4(),
     },
     {
       name: "Hoodie with pocket",
       src: ProductImg6,
       alt: "Product 01",
-      price: "80$",
+      price: "80",
+      id: uuidv4(),
     },
     {
       name: "Flowers cotton dress",
       src: ProductImg7,
       alt: "Product 01",
-      price: "66$",
+      price: "66",
+      id: uuidv4(),
     },
     {
       name: "Hoodie with pocket",
       src: ProductImg8,
       alt: "Product 01",
-      price: "32$",
+      price: "32",
+      id: uuidv4(),
     },
   ];
 
@@ -74,8 +83,8 @@ const Products = () => {
           {productsList.map((product, i) => {
             return (
               <Product
-                id={i}
-                key={i}
+                key={product.id}
+                id={product.id}
                 alt={i}
                 ProductName={product.name}
                 src={product.src}

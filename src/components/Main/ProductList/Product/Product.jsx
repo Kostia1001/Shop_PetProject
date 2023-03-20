@@ -1,25 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Product.module.scss";
 import { addToItem } from "../../../../store/productSlice";
 import { useDispatch } from "react-redux";
 
-
 const Product = (product) => {
   const { src, ProductName, alt, price, id } = product;
-
   const dispatch = useDispatch();
 
   const handleClick = () => {
     dispatch(addToItem(product));
   };
-  
+
   return (
     <div className={styles.Product} id={id}>
       <div className={styles.ProductsImage}>
-        <Link to="/" className={styles.ProductsImageBlock}>
+        <NavLink to="/home" className={styles.ProductsImageBlock}>
           <img src={src} alt={alt} />
-        </Link>
+        </NavLink>
 
         <button onClick={handleClick} className={styles.AddToWishlist}>
           <svg
@@ -40,9 +38,9 @@ const Product = (product) => {
       </div>
       <div className={styles.ProductBody}>
         <h3>
-          <Link to="/">{ProductName}</Link>
+          <NavLink to="/home">{ProductName}</NavLink>
         </h3>
-        <p>{price}</p>
+        <p>${price}</p>
       </div>
     </div>
   );

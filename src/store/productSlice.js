@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { v4 as uuidv4 } from "uuid";
 
 const state = {
   products: [],
@@ -9,12 +10,11 @@ const productSlice = createSlice({
   initialState: state,
   reducers: {
     addToItem: (state, action) => {
-      console.log(action);
-      state.products.push(action.payload);
+      state.products.push({ ...action.payload, wishListId: uuidv4() });
     },
     removeFromItem: (state, action) => {
       state.products = state.products.filter(
-        (product) => product.id !== action.payload
+        (product) => product.wishListId !== action.payload
       );
     },
   },

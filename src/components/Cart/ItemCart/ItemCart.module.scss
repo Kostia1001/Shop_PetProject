@@ -1,22 +1,3 @@
-.CartTitle {
-  font-size: 36px;
-  line-height: 1.44;
-  color: #000000;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.CartGrid {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  grid-gap: 100px;
-}
-
-.CartList {
-  display: flex;
-  flex-direction: column;
-}
-
 .Item {
   display: flex;
   align-items: center;
@@ -62,17 +43,4 @@
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 10px;
-}
-
-.BtnFullWidth {
-  width: 100%;
-}
-
-.Container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1650px;
 }

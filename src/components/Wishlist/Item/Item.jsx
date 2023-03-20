@@ -2,20 +2,32 @@ import React from "react";
 import styles from "./Item.module.scss";
 import Button from "../../Button/Button";
 import { removeFromItem } from "../../../store/productSlice";
+import { addToItemCart } from "../../../store/cartSlice";
 import { useDispatch } from "react-redux";
 
 const Item = (props) => {
-  const { src, price, ProductName, name = "Add to card", alt, id } = props.item;
+  const {
+    src,
+    price,
+    ProductName,
+    name = "Add to card",
+    alt,
+    wishListId,
+  } = props.item;
+
   const dispatch = useDispatch();
 
-  const handelClick = () => {
-    dispatch(removeFromItem(id));
+  const handleClick = () => {
+    dispatch(removeFromItem(wishListId));
+  };
+  const handleClickAddToCart = () => {
+    dispatch(addToItemCart(props.item));
   };
 
   return (
     <div className={styles.Item}>
       <div className={styles.ItemContent}>
-        <button className={styles.ItemDelete} onClick={handelClick}>
+        <button className={styles.ItemDelete} onClick={handleClick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -37,12 +49,12 @@ const Item = (props) => {
 
           <div className="media-body mw-210">
             <p className={styles.ItemTitle}>{ProductName}</p>
-            <p className={styles.ItemPrice}>{price}</p>
+            <p className={styles.ItemPrice}>${price}</p>
           </div>
         </div>
       </div>
       <div className={styles.ItemBtn}>
-        <Button name={name} />
+        <Button name={name} onClick={handleClickAddToCart} />
       </div>
     </div>
   );
