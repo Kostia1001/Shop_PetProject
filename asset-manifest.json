@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Shop_PetProject/static/css/main.9e16257c.css",
+    "main.js": "/Shop_PetProject/static/js/main.12d39ce1.js",
+    "static/media/image-home-07.jpg": "/Shop_PetProject/static/media/image-home-07.50554b49271f0ef2ae15.jpg",
+    "static/media/product-01.jpg": "/Shop_PetProject/static/media/product-01.e9c11c30aca193a6a64f.jpg",
+    "static/media/product-06.jpg": "/Shop_PetProject/static/media/product-06.24c2e8613bc78d12067a.jpg",
+    "static/media/product-04.jpg": "/Shop_PetProject/static/media/product-04.47c095228a47724ac2dc.jpg",
+    "index.html": "/Shop_PetProject/index.html",
+    "main.9e16257c.css.map": "/Shop_PetProject/static/css/main.9e16257c.css.map",
+    "main.12d39ce1.js.map": "/Shop_PetProject/static/js/main.12d39ce1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e16257c.css",
+    "static/js/main.12d39ce1.js"
+  ]
+}
