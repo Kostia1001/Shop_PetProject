@@ -1,10 +1,9 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header/Header";
-import Main from "../components/Main/Main";
 const Layout = () => {
   return (
     <div>
-      <nav>
+      <nav style={{position: "sticky",top:0,zIndex:999}}>
         <Header />
       </nav>
       <Outlet />
